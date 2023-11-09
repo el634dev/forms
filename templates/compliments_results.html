@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Compliments Results
+{% endblock %}
+
+{% block content %}
+
+<!-- Your HTML code goes here! -->
+<h2>Hello {{user_name}}! Welcome to Compliments Form</h2>
+
+{% if wants_compliments == 'yes' %}
+    <h4>You are</h4>
+    {% for result in compliments_results}
+    <ul>
+        <li>{{result}}</li>
+    </ul>
+    {% endfor %}
+{% elif wants_compliments == 'no' %}
+    <h4>Not today, maybe tomorrow</h4>
+{% else %}
+    <h4>Invalid input</h4>
+{% endif % } 
+
+{% endblock %}
