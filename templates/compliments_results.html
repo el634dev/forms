@@ -11,7 +11,7 @@ Compliments Results
 
 {% if wants_compliments == 'yes' %}
     <h4>You are</h4>
-    {% for result in compliments_results}
+    {% for result in compliments_results %}
     <ul>
         <li>{{result}}</li>
     </ul>
@@ -20,6 +20,6 @@ Compliments Results
     <h4>Not today, maybe tomorrow</h4>
 {% else %}
     <h4>Invalid input</h4>
-{% endif % } 
+{% endif %} 
 
 {% endblock %}
