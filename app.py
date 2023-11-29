@@ -60,7 +60,7 @@ def compliments_results():
     num_compliments = request.args.get("num_compliments")
 
     if wants_compliments == 'yes':
-        compliments = random.sample(wants_compliments, int(num_compliments))
+        compliments = random.sample(lists_of_compliments, int(num_compliments))
     elif wants_compliments == 'no':
         print("Not today, maybe tomorrow")
     else:
