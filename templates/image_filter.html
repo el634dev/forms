@@ -24,7 +24,7 @@ Image Filtering
                 <select name="filter_type">
                     <!-- Use a for loop to display an option element for each possible filter 
                         type-->
-                    {% for filter in filter_types_dict.keys()}
+                    {% for filter in filter_types_dict.keys() %}
                      <option value="{{filter}}">{{filter}}</option>
                     {% endfor %}
                 </select>
