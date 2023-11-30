@@ -60,7 +60,7 @@ def compliments_results():
     num_compliments = request.args.get("num_compliments")
 
     if wants_compliments == 'yes':
-        compliments = random.sample(lists_of_compliments, int(num_compliments))
+        compliments = random.sample(list_of_compliments, int(num_compliments))
     elif wants_compliments == 'no':
         print("Not today, maybe tomorrow")
     else:
@@ -94,7 +94,7 @@ def animal_facts():
     """Show a form to choose an animal and receive facts."""
     # Collect the form data and save as variables
     animal = request.args.get('animal')
-    animal_facts_keys = animal_facts.keys()
+    animal_facts_keys = animal_to_fact.keys()
 
     context = {
         # Enter your context variables here for:
@@ -203,7 +203,7 @@ API_KEY with a value that is the api key for your account.
 API_KEY = os.getenv('API_KEY')
 print(API_KEY)
 
-TENOR_URL = 'https://api.tenor.com/v1/search'
+TENOR_URL = 'https://tenor.googleapis.com/v2/search'
 pp = PrettyPrinter(indent=4)
 
 @app.route('/gif_search', methods=['GET', 'POST'])
